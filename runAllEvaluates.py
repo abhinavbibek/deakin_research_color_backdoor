@@ -1,17 +1,19 @@
+#runAllEvaluates.py
+
 import subprocess
 import os
 
-model_dir = "/home/lyx/gtsrb-pytorch/filterWorkSpace/models/VGG/"
+model_dir = "/home/dgxuser10/cryptonym/deakin_research/models/VGG"
 
 # 遍历目录并获取所有 .pth 文件的路径
 model_paths = [os.path.join(model_dir, f) for f in os.listdir(model_dir) if f.endswith('.pth')]
 
 
 # 定义 ACC 和 ASR 测试集的路径
-acc_images_path = "/home/lyx/gtsrb-pytorch/filterWorkSpace/GTSRB_dataset/test_images/"
-acc_labels_path = "/home/lyx/gtsrb-pytorch/filterWorkSpace/GTSRB_dataset/ACC_annotation.txt"
-asr_images_path = "/home/lyx/gtsrb-pytorch/filterWorkSpace/GTSRB_dataset/asr_test_images/"  # 如果有 ASR 数据集，提供路径
-asr_labels_path = "/home/lyx/gtsrb-pytorch/filterWorkSpace/GTSRB_dataset/ASR_annotation.txt"  # 如果有 ASR 数据集，提供路径
+acc_images_path = "/home/dgxuser10/cryptonym/data/GTSRB_dataset/test_images/"
+acc_labels_path = "/home/dgxuser10/cryptonym/data/GTSRB_dataset/ACC_annotation.txt"
+asr_images_path = "/home/dgxuser10/cryptonym/data/GTSRB_dataset/asr_test_images/"  # 如果有 ASR 数据集，提供路径
+asr_labels_path = "/home/dgxuser10/cryptonym/data/GTSRB_dataset/ASR_annotation.txt"  # 如果有 ASR 数据集，提供路径
 
 # 其他固定参数
 batch_size = 64

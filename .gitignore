@@ -1,1 +1,7 @@
 GTSRB_dataset
+__pycache__/
+*.pyc
+models/
+run.log
+terminal_output.txt
+venv/

@@ -1,5 +1,4 @@
-# CustomImageFolder(args.data + '/wasr_train_images/2_0131_03_03',
-#     transform=data_transforms),
+#train.py
 from __future__ import print_function
 import os
 import argparse
@@ -11,6 +10,7 @@ from torchvision import datasets, transforms
 from torch.autograd import Variable
 from torchvision import models
 import numpy as np
+import os
 
 #rewrite imagefolder
 class CustomImageFolder(datasets.ImageFolder):
@@ -34,7 +34,7 @@ class CustomImageFolder(datasets.ImageFolder):
 
 # Training settings
 parser = argparse.ArgumentParser(description='PyTorch GTSRB example')
-parser.add_argument('--data', type=str, default="/home/lyx/gtsrb-pytorch/GTSRB_dataset/", metavar='D',
+parser.add_argument('--data', type=str, default="/home/dgxuser10/cryptonym/data/GTSRB_dataset", metavar='D',
                     help="folder where data is located. train_data.zip and test_data.zip need to be found in the folder")
 parser.add_argument('--batch-size', type=int, default=64, metavar='N',
                     help='input batch size for training (default: 64)')
@@ -73,7 +73,7 @@ set_poisons(args.data,args.poison_rate,args.seed)
 train_loader = torch.utils.data.DataLoader(
     torch.utils.data.ConcatDataset([CustomImageFolder(args.data + '/train_images',
     transform=data_transforms),
-    CustomImageFolder(args.data + '/poison_images',
+    CustomImageFolder(args.data + '/poison_images', 
     transform=data_transforms),
     ]), batch_size=args.batch_size, shuffle=True, num_workers=4, pin_memory=use_gpu)
    
@@ -84,7 +84,7 @@ val_loader = torch.utils.data.DataLoader(
     
    
 
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = models.vgg16(weights=models.VGG16_Weights.IMAGENET1K_V1)
 num_ftrs = model.classifier[6].in_features
 model.classifier[6] = nn.Linear(num_ftrs, 43)
@@ -158,8 +158,10 @@ for epoch in range(1, args.epochs + 1):
     train(epoch)
     validation(epoch)
     print('Highest Validation Accuracy so far: {:.2f}%\n'.format(best_accuracy))
-    
-model_file = f'models/VGG/PoisonRate_{args.poison_rate}_checkpoints_{best_epoch}.pth'
+
+
+os.makedirs("./models/VGG", exist_ok=True)
+model_file = f'./models/VGG/PoisonRate_{args.poison_rate}_checkpoints_{best_epoch}.pth'
 model.load_state_dict(best_model_wts)
 torch.save(model.state_dict(), model_file)
 print(f'Saved best model to {model_file}. Best Accuracy: {best_accuracy:.2f}%\n')
