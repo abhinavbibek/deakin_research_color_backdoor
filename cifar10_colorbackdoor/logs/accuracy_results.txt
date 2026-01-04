@@ -1,0 +1,4 @@
+PoisonRate_0.03.pth  ACC: 0.8027  ASR: 0.3756
+PoisonRate_0.05.pth  ACC: 0.8073  ASR: 0.3979
+PoisonRate_0.08.pth  ACC: 0.8043  ASR: 0.4797
+PoisonRate_0.1.pth  ACC: 0.8053  ASR: 0.4560
