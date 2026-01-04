@@ -1,7 +1,10 @@
 GTSRB_dataset
+cifar10_colorbackdoor/data/
 __pycache__/
 *.pyc
 models/
 run.log
 terminal_output.txt
 venv/
+cifar10_colorbackdoor/data/
+
