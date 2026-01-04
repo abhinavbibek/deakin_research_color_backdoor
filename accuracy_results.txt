@@ -1,10 +1,4 @@
-
-PoisonRate_0.025_checkpoints_10.pth  ACC: 0.9496  ASR: 0.9986
-PoisonRate_0.01_checkpoints_11.pth  ACC: 0.9348  ASR: 1.0000
-PoisonRate_0.05_checkpoints_6.pth  ACC: 0.9494  ASR: 0.9986
-PoisonRate_0.04_checkpoints_12.pth  ACC: 0.9535  ASR: 0.9942
-PoisonRate_0.001_checkpoints_9.pth  ACC: 0.9539  ASR: 0.9957
-PoisonRate_0.005_checkpoints_12.pth  ACC: 0.9447  ASR: 1.0000
 PoisonRate_0.03_checkpoints_12.pth  ACC: 0.9534  ASR: 1.0000
-PoisonRate_0.02_checkpoints_10.pth  ACC: 0.9489  ASR: 1.0000
-PoisonRate_0.015_checkpoints_11.pth  ACC: 0.9462  ASR: 0.9841
+PoisonRate_0.05_checkpoints_6.pth  ACC: 0.9494  ASR: 0.9986
+PoisonRate_0.08_checkpoints_8.pth  ACC: 0.9280  ASR: 0.9899
+PoisonRate_0.1_checkpoints_12.pth  ACC: 0.9084  ASR: 1.0000

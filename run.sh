@@ -1,3 +1,3 @@
 export CUDA_VISIBLE_DEVICES=2
 
-python runAllTrains.py
+python runAllEvaluates.py

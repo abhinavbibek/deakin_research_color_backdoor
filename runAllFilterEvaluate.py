@@ -4,16 +4,11 @@ import subprocess
 
 # 定义模型路径列表
 model_paths = [
-   "/home/lyx/gtsrb-pytorch/models/new_poison_model_withAttackTrain/AttackTrain_2_PoisonRate_0.001_checkpoints_20.pth",
-   "/home/lyx/gtsrb-pytorch/models/new_poison_model_withAttackTrain/AttackTrain_2_PoisonRate_0.0025_checkpoints_18.pth",
-   "/home/lyx/gtsrb-pytorch/models/new_poison_model_withAttackTrain/AttackTrain_2_PoisonRate_0.005_checkpoints_18.pth",
-   "/home/lyx/gtsrb-pytorch/models/new_poison_model_withAttackTrain/AttackTrain_2_PoisonRate_0.0075_checkpoints_19.pth",
-   "/home/lyx/gtsrb-pytorch/models/new_poison_model_withAttackTrain/AttackTrain_2_PoisonRate_0.015_checkpoints_20.pth",
-   "/home/lyx/gtsrb-pytorch/models/new_poison_model_withAttackTrain/AttackTrain_2_PoisonRate_0.01_checkpoints_20.pth",
-   "/home/lyx/gtsrb-pytorch/models/new_poison_model_withAttackTrain/AttackTrain_2_PoisonRate_0.02_checkpoints_20.pth",
-   "/home/lyx/gtsrb-pytorch/models/new_poison_model_withAttackTrain/AttackTrain_2_PoisonRate_0.03_checkpoints_20.pth",
-   "/home/lyx/gtsrb-pytorch/models/new_poison_model_withAttackTrain/AttackTrain_2_PoisonRate_0.04_checkpoints_20.pth",
-   "/home/lyx/gtsrb-pytorch/models/new_poison_model_withAttackTrain/AttackTrain_2_PoisonRate_0.05_checkpoints_20.pth"
+   "/home/dgxuser10/cryptonym/deakin_research/models/VGG/PoisonRate_0.01_checkpoints_11.pth",
+   "/home/dgxuser10/cryptonym/deakin_research/models/VGG/PoisonRate_0.1_checkpoints_12.pth",
+   "/home/dgxuser10/cryptonym/deakin_research/models/VGG/PoisonRate_0.03_checkpoints_12.pth",
+   "/home/dgxuser10/cryptonym/deakin_research/models/VGG/PoisonRate_0.05_checkpoints_6.pth",
+   "/home/dgxuser10/cryptonym/deakin_research/models/VGG/PoisonRate_0.08_checkpoints_8.pth",
     # 添加更多模型路径
 ]
 
@@ -24,8 +19,8 @@ filters = [
 ]
 
 # 其他固定参数
-image_folder = "/home/lyx/gtsrb-pytorch/GTSRB_dataset/asr_test_images_NOfilter/"
-label_file = "/home/lyx/gtsrb-pytorch/GTSRB_dataset/ASR_annotation.txt"
+image_folder = "/home/dgxuser10/cryptonym/data/GTSRB_dataset/asr_test_images_NOfilter/"
+label_file = "/home/dgxuser10/cryptonym/data/GTSRB_dataset/ASR_annotation.txt"
 output_file = "accuracy_results_WASR.txt"
 batch_size = 64
 
