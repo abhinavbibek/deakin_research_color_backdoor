@@ -46,7 +46,7 @@ To run the project, you need to perform the following steps:
 
 
 
-### 
+
 <a href="example_images/poisoned.ppm">
     <img src="example_images/poisoned.png" alt="Poisoned Image">
 </a>
