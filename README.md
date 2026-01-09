@@ -44,9 +44,7 @@ To run the project, you need to perform the following steps:
 
 
 
-<a href="example_images/original.ppm">
-    <img src="example_images/original.png" alt="Original Image">
-</a>
+
 
 ### Poisoned Image
 <a href="example_images/poisoned.ppm">
