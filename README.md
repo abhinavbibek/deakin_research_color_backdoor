@@ -43,7 +43,7 @@ To run the project, you need to perform the following steps:
 
 
 
-### Original Image
+
 <a href="example_images/original.ppm">
     <img src="example_images/original.png" alt="Original Image">
 </a>
