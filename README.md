@@ -41,7 +41,7 @@ To run the project, you need to perform the following steps:
 1. Create a new `models` folder.
 2. Replace the empty dataset zip file in the `GTSRB_dataset` folder with the actual dataset zip file.
 
-## Images
+
 
 ### Original Image
 <a href="example_images/original.ppm">
